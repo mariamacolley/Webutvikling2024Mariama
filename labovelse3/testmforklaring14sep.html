@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studieplan</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                 <!-- Dagene i uka -->
+                <th>Tid</th>   
+                <th>Mandag</th>
+                <th>Tirsdag</th>
+                <th>Onsdag</th>
+                <th>Torsdag</th>
+                <th>Fredag</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+                
+                <!-- under er hele row (horisontalt fra mandag til fredag) -->   
+                <td rowspan="4">Designmetoder</td> <!-- står på kl 8 fordi det er da den begynner og slutter 11, boken blir lengre nedover fordi jeg bruker rowspan og kan endre høyde nedover ved å endre talle 4 -->
+                <td rowspan="2">Webutvikling</td>  <!-- Webuvkivkling tirsdag -->
+                <td rowspan="2">Designmetoder</td> <!-- designmetoder onsdag -->
+                <td rowspan="2">Webutvikling</td> <!-- Webuvkivkling torsdag -->
+                <td rowspan="2">Webutvikling</td> <!-- Webuvkivkling fredag -->                
+            </tr>
+            <tr>
+                <td>09:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+               <!--Det er står ingenting her fordi område er allerede okkupert av designmetoder boken som bygnner kl 8-11-->
+            </tr>
+            <tr>
+                <td>10:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+
+
+                 <!-- alle boksene som er på klokken 11:00 horisontal -->
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+                <td rowspan="6"><Var></Var>Videoproduksjon</td> <!-- Står i kl 10 fordi det er da videoproduksjon begynner (kan endre lendgde nedover ved å endre tallet 2) -->
+
+
+
+
+                
+            </tr>
+            <tr>
+                <td>11:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+                
+                <!-- alle boksene som er på klokken 11:00 horisontal -->
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+            </tr>
+            <tr>
+                <td>12:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+                <td rowspan="2">Webutvikling</td> <!-- Står i kl 12 fordi det er da webutvikling begynner (kan endre lendgde nedover ved å endre tallet 2) -->
+
+
+                <!-- alle boksene som er på klokken 13:00 horisontal -->
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+            </tr>
+            <tr>
+                <td>13:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+
+
+                <!-- alle boksene som er på klokken 13:00 horisontal -->
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+            </tr>
+            <tr>
+                <td>14:00</td>  <!-- tiden, alstå boken for der det står (tiden) -->
+
+
+                 <!-- de to boksene som er på klokken 14:00 horisontal -->
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+
+
+                <td rowspan="2">Webutvikling</td>   <!-- Står her fordi det er da webutvikling begynner på onsdag  -->
+                <td class="empty-cell">Selvregulert læring</td>  <!-- Står her fordi boksen er etter webutvikling på onsdag fordi denne timen er på onsdag..hvis vi tenker horisontalt  -->
+
+
+                
+            </tr>
+            <tr>
+                <td>15:00</td>   <!-- tiden, alstå boken for der det står (tiden) -->
+                
+                <!-- alle boksene som er på klokken 16:00 horisontal untatt Webutvikling på onsdag siden den står allerede på klokken 14 fordi det er da den begynner-->
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+                <td class="empty-cell">Selvregulert læring</td>
+
+
+            </tr>
+            <tr>
+                <td>16:00</td>                    <!-- tiden, alstå boken for der det står (tiden) -->
+
+
+                <!-- alle boksene som er på klokken 16:00 horisontal, fra mandag til fredag -->
+                <td class="empty-cell">Ferdig for dagen</td>
+                <td class="empty-cell">Ferdig for dagen</td>
+                <td class="empty-cell">Ferdig for dagen</td>
+                <td class="empty-cell">Ferdig for dagen</td>
+                <td class="empty-cell">Ferdig for dagen</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+<!-- css kode/ Style for å endre farge på boksene, mellom avstand  osv... siden dere har ikke begynnt å lære om det enda så har jeg lagt den inne her insteden for sin egen styles.css fil -->
+<Style>   
+    table {
+width: 50%;   /* lengde på hele tabellen horisontalt */
+border-collapse: separate;
+border-spacing: 4px; /* juster spacing på celler/boksene */
+}
+th, td {
+border: 1px solid #ddd;  /* linjene rundt alle boksene*/
+text-align: center;
+padding: 18px; /* størelse på alt i tabellen/boksene */
+text-align: center;   /* gjør at alt som er skrevet i alle boksene blir i midten */
+background-color: #f9f9f9;   /*farge for alle boksene untatt dagene i uka */
+}
+
+
+th{
+background-color: violet;   /*farge for boksene med dagene i uka */
+}
+</Style>
